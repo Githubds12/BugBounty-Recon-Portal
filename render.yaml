@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: bug-bounty-recon-portal
+    env: python
+    buildCommand: "./build.sh"
+    startCommand: "python server.py"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.0
+      - key: GO_VERSION
+        value: 1.20.0
